@@ -1,100 +1,38 @@
-User Instruction
+# Study & Work Spaces
 
-Mobile Application for Finding Study and Work Spaces
+Простой статический демо-проект (HTML/CSS) для просмотра экрана приложения поиска мест для учебы и работы.
 
-1. Purpose of the Application
-This mobile application is designed to help users find free and comfortable places for studying and working, such as libraries, coworking spaces, and cafés. The app allows users to quickly see where there are available seats, an appropriate noise level, and access to Wi-Fi.
+## Запуск **без сервера** (самый простой способ)
 
-2. Getting Started
+Этот проект можно открыть вообще без `python`, `node` и терминала.
 
-Install the application on your mobile device
+### Windows
+1. Откройте папку проекта.
+2. Найдите файл `index.html` (именно в нижнем регистре).
+3. Нажмите по нему **двойным кликом**.
+4. Если открылся не тот браузер: правой кнопкой → **Открыть с помощью** → Chrome/Edge/Firefox.
 
-Open the application
+Должен открыться адрес вида:
+- `file:///C:/.../GetPlace/index.html`
 
-Register or log in using your email
+> Если у вас открывается `Index.html`, это тоже допустимо, но предпочтительно запускать `index.html`.
 
-Select the city where you want to find a study or work place
+## Если не открывается без сервера
+Проверьте:
+1. Вы распаковали архив полностью, а не открываете файл прямо внутри zip.
+2. Файл называется `index.html`, не `index.html.txt`.
+3. Путь к файлу не содержит ограничений доступа (например, системная временная папка с блокировкой).
+4. Попробуйте переместить папку проекта в `Desktop` и открыть снова.
 
-After completing these steps, the main screen of the application will open.
+## Альтернатива (если нужен запуск через сервер)
+```bash
+cd /workspace/GetPlace
+python3 -m http.server 8000
+```
 
-3. Main Screen (Map)
+Потом открыть:
+- `http://127.0.0.1:8000/index.html`
 
-The main screen displays a map with available study and work locations.
-
-On this screen, the user can:
-
-View nearby places for studying or working
-
-See the current level of occupancy for each location
-
-Tap on a location to open detailed information
-
-4. Using Filters
-
-The user can open the filter screen and select the required options:
-
-Quiet or noisy environment
-
-Availability of Wi-Fi
-
-Availability of power outlets
-
-After applying the filters, only suitable locations will be shown on the map.
-
-5. Location Card
-
-When a user selects a specific location, a location card opens.
-
-In the location card, the user can:
-
-View the description and address
-
-Check occupancy and noise level
-
-See whether Wi-Fi and power outlets are available
-
-Add the location to favorites
-
-Read reviews from other users
-
-6. Reviews
-
-Registered users can:
-
-Leave a review for a location
-
-Give a rating
-
-Each user can leave only one review per location.
-
-7. Favorites
-
-The user profile contains a list of favorite locations.
-
-The user can:
-
-Quickly access saved locations
-
-Remove locations from favorites
-
-8. User Profile
-
-In the user profile, the user can:
-
-View the list of favorite locations
-
-Log out of the account
-
-9. Limitations and Features
-
-Online seat booking is not available
-
-Payments through the application are not supported
-
-Occupancy information is not updated in real time
-
-The application is available only as a mobile version
-
-10. Ending the Session
-
-To end the session, the user can log out of the account or simply close the application.
+## Что внутри
+- `index.html` — основная страница для запуска.
+- `Index.html` — дубликат для совместимости со старым названием файла.
